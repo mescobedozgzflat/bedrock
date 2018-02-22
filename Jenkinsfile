@@ -6,26 +6,6 @@ pipeline {
                 sh ' echo "Fase de test completa."'
             }
         }
-        stage('Build') {
-            agent {
-                dockerfile true
-            }
-            options {
-                skipDefaultCheckout()
-            }
-            steps {
-                //sh 'compass compile $DESTINATION_CONFIGRB'
-            }
-        }
-        stage('Deploy') {
-            agent any
-            options {
-                skipDefaultCheckout()
-            }
-            steps {
-                //sh 'eval rsync $RSYNC_PARAMS ./ $DESTINATION_SERVER:$DESTINATION_PATH'
-            }
-        }
     }
     environment {
         DESTINATION_SERVER = 'www-data@130.211.66.72'
