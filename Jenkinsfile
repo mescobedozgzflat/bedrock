@@ -20,6 +20,6 @@ pipeline {
         DESTINATION_SERVER = 'www-data@35.227.110.165'
         DESTINATION_PATH = '/var/www/bedrock'
         DESTINATION_CONFIGRB = './skin/frontend/pesc/default'
-        RSYNC_PARAMS = '-rlvv --del --exclude=.git --exclude=.gitignore  --exclude=rsync.log -exclude-from=.gitignore --log-file=rsync.log' 
+        RSYNC_PARAMS = '-rlvv --del --exclude=.git --exclude=.gitignore  --exclude=rsync.log --exclude-from=.gitignore --log-file=rsync.log' 
     }
 }
