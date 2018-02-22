@@ -14,6 +14,7 @@ pipeline {
                 skipDefaultCheckout()
             }
             steps {
+                sh ' echo "Fase de test completa."'
                 //sh 'compass compile $DESTINATION_CONFIGRB'
             }
         }
