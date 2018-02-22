@@ -6,18 +6,6 @@ pipeline {
                 sh ' echo "Fase de test completa."'
             }
         }
-        stage('Build') {
-            agent {
-                dockerfile true
-            }
-            options {
-                skipDefaultCheckout()
-            }
-            steps {
-                sh ' echo "Fase de test completa."'
-                //sh 'compass compile $DESTINATION_CONFIGRB'
-            }
-        }
         stage('Deploy') {
             agent any
             options {
